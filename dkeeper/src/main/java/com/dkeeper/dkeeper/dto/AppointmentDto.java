@@ -1,27 +1,22 @@
 package com.dkeeper.dkeeper.dto;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 import javax.persistence.Column;
+import  java.math.BigDecimal;
+import java.time.LocalDateTime;
 @Data
+
 public class AppointmentDto {
-    @Column(name = "CodeId", unique = true, nullable = false)
-    private String CodeId;
+    @Column(name = "code_id", unique = true, nullable = false)
+    private String codeId;
 
-    @Column(name = "ClientID", unique = true, nullable = false)
-    private String ClientID;
+    @Column(name = "end_time", unique = true, nullable = false)
+    private LocalDateTime endTime;
 
-    @Column(name = "ClientName", unique = true, nullable = false)
-    private String ClientName;
+    @Column(name = "price_final", unique = true, nullable = false)
+    private BigDecimal priceFinal;
 
-    @Column(name = "ClientContact", unique = true, nullable = false)
-    private String ClientContact;
-
-    @Column(name = "EndTime", unique = true, nullable = false)
-    private String EndTime;
-
-    @Column(name = "PriceFinal", unique = true, nullable = false)
-    private String PriceFinal;
-
-    @Column(name = "Canceled", unique = true, nullable = false)
-    private String Canceled;
+    @Column(name = "canceled", unique = true, nullable = false)
+    private Boolean canceled;
 
 }

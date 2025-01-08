@@ -3,23 +3,21 @@ package com.dkeeper.dkeeper.model;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
-@Entity
-@Table(name = "serviceProvide")
 @Data
-public class ServiceProvided implements Serializable {
-
+@Entity
+@Table(name = "service_provided")
+public class ServiceProvided {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Column(name = "CodeId", unique = true, nullable = false)
-    private String CodeId;
+    @Column(name = "code_id", unique = true, nullable = false)
+    private String codeId;
 
-    @Column(name = "ServiceId", unique = true, nullable = false)
-    private String ServiceId;
+    @Column(name = "employee_id", nullable = false)
+    private String employeeId;
 
-    @Column(name = "PriceFinal", unique = true, nullable = false)
-    private String PriceFinal;
+    @Column(name = "service_provided", nullable = false)
+    private String serviceProvided;
 
+    @Column(name = "price_final", nullable = false)
+    private String priceFinal;
 }

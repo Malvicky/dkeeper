@@ -3,12 +3,16 @@ import lombok.Data;
 import javax.persistence.Column;
 @Data
 public class EmployeeDto {
-    @Column(name = "CodeId", unique = true, nullable = false)
-    private String CodeId;
+    @Column(name = "employee_id", unique = true, nullable = false)
+    private String employeeId;
 
-    @Column(name = "FirstName", unique = true, nullable = false)
-    private String FirstName;
+    @Column(name = "employee_firstname", unique = true, nullable = false)
+    private String employeeFirstname;
 
-    @Column(name = "LastName", unique = true, nullable = false)
-    private String LastName;
+    @Column(name = "employee_lastname", unique = true, nullable = false)
+    private String employeeLastname;
+
+    @Column(name = "employee_contact", unique = true, nullable = false)
+    private String employeeContact;
+
 }

@@ -14,12 +14,12 @@ public class Schedule implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "CodeId", unique = true, nullable = false)
-    private String CodeId;
+    @Column(name = "code_id", unique = true, nullable = false)
+    private String codeId;
 
-    @Column(name = "EmployeeId", unique = true, nullable = false)
-    private String EmployeeId;
+    @Column(name = "employee_id", unique = true, nullable = false)
+    private String employeeId;
 
-    @Column(name = "Location", unique = true, nullable = false)
-    private String Location;
+    @Column(name = "location", unique = true, nullable = false)
+    private String location;
 }

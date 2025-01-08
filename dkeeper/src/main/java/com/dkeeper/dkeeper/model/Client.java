@@ -13,18 +13,21 @@ public class Client implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "ClientID", unique = true, nullable = false)
-    private String ClientID;
+    @Column(name = "first_name", unique = true, nullable = false)
+    private String firstName;
 
-    @Column(name = "Name", unique = true, nullable = false)
-    private String Name;
+    @Column(name = "last_name", unique = true, nullable = false)
+    private String lastName;
 
-    @Column(name = "ClientContact", unique = true, nullable = false)
-    private String ClientContact;
+    @Column(name = "username", unique = true, nullable = false)
+    private String username;
 
-    @Column(name = "ClientEmail", unique = true, nullable = false)
-    private String ClientEmail;
+    @Column(name = "password", unique = true, nullable = false)
+    private String password;
 
-    @Column(name = "ClientAddress", unique = true, nullable = false)
-    private String ClientAddress;
+    @Column(name = "email", unique = true, nullable = false)
+    private String email;
+
+    @Column(name = "phone", unique = true, nullable = false,length = 9)
+    private Integer phone;
 }

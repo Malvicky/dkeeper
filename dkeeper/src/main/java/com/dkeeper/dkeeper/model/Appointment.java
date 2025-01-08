@@ -1,7 +1,6 @@
 package com.dkeeper.dkeeper.model;
 
 import lombok.Data;
-
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -14,46 +13,37 @@ public class Appointment implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "CodeId", unique = true, nullable = false)
-    private String CodeId;
+    @Column(name = "unique_code", unique = true, nullable = false)
+    private String uniqueCode;
 
-    @Column(name = "DateCreated", unique = true, nullable = false)
-    private String DateCreated;
+    @Column(name = "date_created", unique = true, nullable = false)
+    private String dateCreated;
 
-    @Column(name = "ClientID", unique = true, nullable = false)
-    private String ClientID;
+    @Column(name = "start_time", unique = true, nullable = false)
+    private String startTime;
 
-    @Column(name = "ClientName", unique = true, nullable = false)
-    private String ClientName;
+    @Column(name = "endtime_expected", unique = true, nullable = false)
+    private String endtimeExpected;
 
-    @Column(name = "ClientContact", unique = true, nullable = false)
-    private String ClientContact;
+    @Column(name = "end_time", unique = true, nullable = false)
+    private String endTime;
 
-    @Column(name = "StartTime", unique = true, nullable = false)
-    private String StartTime;
+    @Column(name = "price_expected", unique = true, nullable = false)
+    private String priceExpected;
 
-    @Column(name = "EndtimeExpected", unique = true, nullable = false)
-    private String EndtimeExpected;
+    @Column(name = "price_full", unique = true, nullable = false)
+    private String priceFull;
 
-    @Column(name = "EndTime", unique = true, nullable = false)
-    private String EndTime;
+    @Column(name = "discount", unique = true, nullable = false)
+    private String discount;
 
-    @Column(name = "PriceExpected", unique = true, nullable = false)
-    private String PriceExpected;
+    @Column(name = "price_final", unique = true, nullable = false)
+    private String priceFinal;
 
-    @Column(name = "PriceFull", unique = true, nullable = false)
-    private String PriceFull;
+    @Column(name = "canceled", unique = true, nullable = true)
+    private String canceled;
 
-    @Column(name = "Discount", unique = true, nullable = false)
-    private String Discount;
-
-    @Column(name = "PriceFinal", unique = true, nullable = false)
-    private String PriceFinal;
-
-    @Column(name = "Canceled", unique = true, nullable = true)
-    private String Canceled;
-
-    @Column(name = "CancellationReason", unique = false, nullable = true)
-    private String CancellationReason;
+    @Column(name = "cancellation_reason", unique = false, nullable = true)
+    private String cancellationReason;
 }
 
